@@ -1,6 +1,8 @@
 # jsonhpp
 C++类对象Serialization/Deserialization
 
+实现依赖 [nlohmann/json](https://github.com/nlohmann/json)
+
 
 #### 简单示例
 ```
