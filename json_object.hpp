@@ -6,6 +6,8 @@
 
 /** 添加字段 */
 #define JsonAddField(field) addField(#field, field)
+/** 添加数组 */
+#define JsonAddArray(field) addField(#field, field)
 /** 添加对象(对象实现JsonBaseObject接口) */
 #define JsonAddObject(object) addObject(#object, object)
 /** 添加对象数组(对象实现JsonBaseObject接口) */

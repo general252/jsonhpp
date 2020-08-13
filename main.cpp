@@ -28,7 +28,7 @@ public:
     virtual void addJsonData() {
         JsonAddField(id);
         JsonAddField(name);
-        JsonAddField(listName);
+        JsonAddArray(listName);
         JsonAddObject(object);
         JsonAddObjectArray(oneList);
     }
