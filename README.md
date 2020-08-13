@@ -2,8 +2,47 @@
 C++类对象Serialization/Deserialization
 
 
+#### 简单示例
+```
+#include "json_object.hpp"
+#include <iostream>
+#include <string>
+
+class One : public JsonBaseObject {
+public:
+    // 通过 JsonBaseObject 继承
+    virtual void addJsonData() {
+        JsonAddField(aliyun);
+    }
+    virtual void parseJsonData() {
+        JsonGetField(aliyun);
+    }
+
+public:
+    std::string aliyun;
+
+};
+
+int main()
+{
+    One object_src;
+    object_src.aliyun = "o1 aliyun";
+
+    std::string strJson = object_src.toJsonString(4);
+    printf("src: %s\n", strJson.data());
+
+    One object_dst;
+    object_dst.parseJsonString(strJson);
+
+    printf("dst: %s\n", object_dst.toJsonString(4).data());
+    return 0;
+}
 ```
 
+
+
+#### 对象、容器
+```
 #include "json_object.hpp"
 #include <list>
 #include <vector>
